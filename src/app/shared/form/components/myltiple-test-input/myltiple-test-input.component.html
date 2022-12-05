@@ -1,0 +1,15 @@
+<div class="education" *ngFor="let input of multiplyArray; let i = index">
+  <app-test-input 
+    [inputData]="input"
+    [withoutLabel]="i > 0" 
+    [withoutDescription]="multiplyArray.length - 1 === i"
+    [index]="i"
+    [control]="formGroup.get(inputData.label + '_' + i)"
+    >
+  </app-test-input>
+  <div class="education__buttons">
+    <button *ngIf="i !== 0" (click)="deleteEducation(i)" class="delete-education"></button>
+    <button *ngIf="multiplyArray.length - 1 === i" (click)="addEducation(i+1)" class="add-education"></button>
+    <p *ngIf="multiplyArray.length - 1 === i" class="education__text">{{input.addEducation}}</p>
+  </div>
+</div>

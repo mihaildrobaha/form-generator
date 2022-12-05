@@ -1,0 +1,16 @@
+<div class="test-input-wrapper">
+
+  <div class="test-input">
+    <label *ngIf="!withoutLabel" class="test-input__label" for="test-input">{{inputData.label}}<span *ngIf="inputData.isRequired" class="red-star">*</span></label>
+    <div *ngIf="withoutLabel" class="test-input__label"></div>
+    <input [formControl]="control" class="test-input__field" type="text" id="test-input" placeholder="{{inputData.placeholder}}">
+  </div>
+
+  <div *ngIf="withoutDescription" class="description">
+    <div class="test-input__label"></div>
+    <p class="description__text">
+      {{inputData.description}}
+    </p>
+  </div>
+  
+</div>

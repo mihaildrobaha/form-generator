@@ -1,0 +1,53 @@
+.test-input-wrapper{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+
+  .test-input{
+    display: flex;
+    align-items: center;
+
+    &__label{
+      display: flex;
+      width: 140px;
+      margin-right: 17px;
+    }
+
+    &__field{
+      width: 500px;
+      height: 44px;
+      border: 1px solid #C3C3C3;
+      border-radius: 3px;
+      font-size: 17px;
+      line-height: 22px;
+      padding: 0px 15px 0px 15px;
+    }
+  }
+
+  .description {
+    display: flex;
+
+    &__text {
+      margin: 0;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      display: flex;
+      font-size: 13px;
+      line-height: 17px;
+      color: #9D9D9D;
+    }
+  }
+
+  .red-star{
+    color:#FF0000
+  }
+  
+  input:focus{
+    outline: 1px solid #888888;
+  }
+
+  input::placeholder {
+    color: #9D9D9D;
+}
+
+}

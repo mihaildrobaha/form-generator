@@ -1,0 +1,14 @@
+<div class="input-wrapper">
+
+    <label class="test-number-input-label" for="number-input">{{inputData.label}}<span *ngIf="inputData.isRequired" class="red-star">*</span></label>
+    <input [formControl]="control" class="test-number-input" type="number" id="number-input">
+
+  <div class="buttons">
+
+    <button (click)="increaseValue()" class="increase"><div class="triangle-up"></div></button>
+    <div class="horizontal-line"></div>
+    <button (click)="decreaseValue()" class="decrease"><div class="triangle-down"></div></button>
+    
+  </div>
+
+</div>

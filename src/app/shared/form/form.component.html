@@ -1,0 +1,21 @@
+<form class="forms" [formGroup]="myFormGroup">
+  <h1 class="header">Анкета</h1>
+  <div *ngFor="let input of inputsArray">
+    <div *ngIf="input.type === 'text' && input.isMultiply === false">
+      <app-test-input [control]="getFormControl(input.label)" [inputData]="input"></app-test-input>
+    </div>
+    <div *ngIf="input.type === 'number'">
+      <app-test-number [control]="getFormControl(input.label)" [inputData]="input" ></app-test-number>
+    </div>
+    <div *ngIf="input.type === 'select'">
+      <app-test-select [control]="getFormControl(input.label)" [inputData]="input"></app-test-select>
+    </div>
+    <div *ngIf="input.type === 'checkbox'">
+      <app-test-checkbox [control]="getFormControl(input.label)" [inputData]="input"></app-test-checkbox>
+    </div>
+    <div *ngIf="input.type === 'text' && input.isMultiply === true">
+      <app-myltiple-test-input [control]="getFormControl(input.label)" [inputData]="input"></app-myltiple-test-input> 
+    </div>
+  </div>
+  <button [disabled]="!myFormGroup.valid" (click)="onSubmit()" class="submit">Отправить</button>
+</form>

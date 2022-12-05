@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+:host{
+  box-sizing: border-box;
+  font-family: 'PT Sans', 'sans-serif';
+  font-size: 17px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.forms{
+  display: flex;
+  flex-direction: column;
+  margin-top: 87px;
+  margin-left: 135px;
+
+  .header{
+    font-weight: 400;
+    font-size: 41px;
+    line-height: 53px;
+    margin-bottom: 42px;
+  }
+
+  .submit{
+    width: 139px;
+    height: 52px;
+    background: rgb(255, 230, 131);
+    border-radius: 3px;
+    margin-left: 155px;
+    margin-bottom: 106px;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    line-height: 22px;
+    color: rgb(0, 0, 0);
+  }
+
+  .submit:hover {
+    color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .submit:disabled {
+    opacity: 0.4;
+  }
+
+}
+

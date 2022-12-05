@@ -1,0 +1,69 @@
+.education{
+  display: flex;
+
+  &__buttons{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+
+  &__text{
+    margin-top: 2px;
+    padding: 0;
+  }
+}
+
+.delete-education{
+  background: url('/assets/icons/red-circle.svg') no-repeat;
+  width: 26px;
+  height: 26px;
+  margin-left: 15px;
+  position: relative;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.delete-education::after{
+  content: url('/assets/icons/white-line.svg');
+  position: absolute;
+  right: 7px;
+  top: 2px;
+}
+
+.delete-education::before{
+  content: url('/assets/icons/white-line-2.svg');
+  position: absolute;
+  right: 7px;
+  top: 2px;
+}
+
+.add-education{
+  background: url('/assets/icons/black-circle.svg') no-repeat;
+  width: 26px;
+  height: 26px;
+  margin-left: 15px;
+  margin-right: 7px;
+  position: relative;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.add-education::after{
+  content: url('/assets/icons/black-line.svg');
+  position: absolute;
+  right: 12px;
+  top: 3px;
+}
+
+.add-education::before{
+  content: url('/assets/icons/black-line-2.svg');
+  position: absolute;
+  right: 6px;
+  top: -3px;
+}

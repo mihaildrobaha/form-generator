@@ -1,0 +1,21 @@
+<div class="select-input-wrapper">
+
+  <label class="select-is-married-label" for="format">{{inputData.label}}<span *ngIf="inputData.isRequired" class="red-star">*</span></label>
+
+  <div class="form-group">
+    <div class="dropdown">
+      <button (click)="showDropDownList()" (focusout)="closeDropDownList()" [ngClass]="{'dropdown-button-active' : dropDownListToggle == true, 'dropdown-button-none-active' : dropDownListToggle == false}" class="dropdown-button">{{inputData.placeholder}}
+        <ul *ngIf="dropDownListToggle" class="dropdown-list">
+          <li *ngFor="let item of inputData.values; let i = index"
+            (click)="selectValue(i)"
+            class="dropdown-list-item"
+            [ngClass]="{'dropdown-list-item-active' : item.isSelected}">
+            {{item.value}}
+          </li>
+        </ul>
+      </button>
+    </div>
+  </div>
+
+</div>
+

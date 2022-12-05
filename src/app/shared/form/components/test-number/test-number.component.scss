@@ -1,0 +1,103 @@
+.input-wrapper{
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+
+  .test-number-input-label{
+    width: 140px;
+    display: flex;
+    margin-right: 17px;
+    align-items: center;
+  }
+
+  .test-number-input{
+    width: 70px;
+    height: 44px;
+    border: 1px solid #C3C3C3;
+    border-radius: 3px;
+    font-size: 17px;
+    line-height: 22px;
+    margin-right: 5px;
+    padding: 0px 15px 0px 15px;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+  }
+  
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+  .red-star{
+    color:#FF0000
+  }
+  
+  .buttons{
+    display: flex;
+    flex-direction: column;
+  
+    .increase{
+      width: 30px;
+      height: 22px;
+      background: #DFDFDF;
+      border-top-right-radius: 3px;
+      border-top-left-radius: 3px;
+      border: none;
+
+      .triangle-up{
+        margin-left: 2px;
+        width: 0;
+        height: 0;
+        border-bottom: 10px solid #9D9D9D;;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        cursor: pointer;
+      }
+
+      .triangle-up:hover{
+        border-bottom: 10px solid #626262;
+        transition: .3s;
+      }
+
+    }
+
+    .horizontal-line{
+      width: 30px;
+      border-top: 1px solid #9D9D9D;;
+    }
+  
+    .decrease{
+      width: 30px;
+      height: 22px;
+      background: #DFDFDF;
+      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: 3px;
+      border: none;
+
+      .triangle-down{
+        margin-left: 2px;
+        width: 0;
+        height: 0;
+        border-top: 10px solid #9D9D9D;;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        transition: .3s;
+        cursor: pointer;
+      }
+
+      .triangle-down:hover{
+        border-top: 10px solid #626262;
+      }
+
+    }
+  
+  }
+
+  .test-number-input:focus{
+    outline: 1px solid #888888;
+  }
+
+}

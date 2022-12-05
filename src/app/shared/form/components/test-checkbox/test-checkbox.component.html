@@ -1,0 +1,12 @@
+<div class="checkbox-wrapper">
+
+  <label class="checkbox-label">{{inputData.label}}</label>
+
+  <div class="container">
+    <div *ngFor="let choice of inputData.choices; let i = index" class="checkbox">
+      <input  [checked]="choice.isChecked" class="checkbox-input" (click)="checkBoxClicked(i)" type="checkbox" id="{{inputData.choices[i].id}}" value="{{inputData.choices[i].id}}">
+      <label class="checkbox-input-label" [ngClass]="{'select-all': inputData.choices[i].id === 'select-all'}" for="{{inputData.choices[i].id}}">{{inputData.choices[i].value}}</label>
+    </div>
+  </div>
+
+</div>
